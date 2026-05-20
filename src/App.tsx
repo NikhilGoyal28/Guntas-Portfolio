@@ -39,19 +39,19 @@ const App: React.FC = () => {
     }
     requestAnimationFrame(raf);
 
-    // Premium GSAP Reveal scroll triggers
+    // Premium Snappy Reveal scroll triggers
     const sections = gsap.utils.toArray('.reveal') as HTMLElement[];
     sections.forEach((section) => {
       gsap.fromTo(section, 
-        { y: 80, opacity: 0 },
+        { y: 30, opacity: 0 },
         { 
           y: 0, 
           opacity: 1, 
-          duration: 1.5, 
-          ease: 'expo.out',
+          duration: 0.75, 
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 85%',
+            start: 'top 88%',
           }
         }
       );

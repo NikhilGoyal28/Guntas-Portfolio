@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
       <div style={{ position: 'absolute', top: '50%', right: '-10%', width: '500px', height: '500px', background: 'var(--gold-primary)', filter: 'blur(200px)', opacity: 0.1, borderRadius: '50%', zIndex: 0 }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '5rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(2rem, 5vw, 5rem)', alignItems: 'center' }}>
 
           {/* Left Side: Big Text & Direct Links */}
           <div>
@@ -108,7 +108,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Side: Qualified Audit Form */}
-          <div className="glass-panel" style={{ padding: '4rem 3rem', minHeight: '580px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="glass-panel" style={{ padding: 'clamp(1.5rem, 5vw, 4rem) clamp(1.2rem, 4vw, 3rem)', minHeight: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
                 <motion.div

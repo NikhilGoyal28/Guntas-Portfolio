@@ -15,9 +15,9 @@ const GlobalCanvasBackground: React.FC = () => {
     let height = (canvas.height = window.innerHeight);
 
     const particles: Particle[] = [];
-    const particleCount = 60;
-    const connectionDistance = 120;
-    const mouse = { x: -9999, y: -9999, radius: 180 };
+    const particleCount = window.innerWidth < 768 ? 20 : 60;
+    const connectionDistance = window.innerWidth < 768 ? 80 : 120;
+    const mouse = { x: -9999, y: -9999, radius: window.innerWidth < 768 ? 100 : 180 };
 
     class Particle {
       x: number;

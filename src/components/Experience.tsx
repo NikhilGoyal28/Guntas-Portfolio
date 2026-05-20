@@ -89,9 +89,9 @@ const Experience: React.FC = () => {
           .experience-period {
             border: 1px solid rgba(212, 175, 55, 0.3);
             padding: 0.5rem 1.5rem;
-            borderRadius: 50px;
+            border-radius: 50px;
             color: var(--accent-gold);
-            fontWeight: 600;
+            font-weight: 600;
             font-family: 'Outfit';
             white-space: nowrap;
           }

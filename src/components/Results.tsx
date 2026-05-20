@@ -185,7 +185,6 @@ const Results: React.FC = () => {
 
   const proofs: ProofImage[] = [
     { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.49.jpeg", label: "Instagram Analytics Spikes" },
-    { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.49 (1).jpeg", label: "Audience Engagement Proof" },
     { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.50.jpeg", label: "Viral Trend Insights" },
     { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.50 (1).jpeg", label: "Client Validation Message" }
   ];
@@ -215,34 +214,34 @@ const Results: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              style={{ padding: '3.5rem', display: 'flex', flexDirection: 'column', gap: '3rem' }}
+              style={{ padding: 'clamp(1.5rem, 5vw, 3.5rem)', display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 4vw, 3rem)' }}
             >
               
               {/* Top Header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.8rem' }}>
-                    <span style={{ fontFamily: 'Outfit', fontSize: '1.8rem', fontWeight: 900, color: '#fff' }}>{c.brand}</span>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--gold-primary)', border: '1px solid var(--gold-primary)', padding: '0.2rem 0.8rem', borderRadius: '50px', fontWeight: 700, fontFamily: 'Outfit', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <div style={{ flex: '1 1 300px', minWidth: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontFamily: 'Outfit', fontSize: 'clamp(1.4rem, 4vw, 1.8rem)', fontWeight: 900, color: '#fff' }}>{c.brand}</span>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--gold-primary)', border: '1px solid var(--gold-primary)', padding: '0.2rem 0.8rem', borderRadius: '50px', fontWeight: 700, fontFamily: 'Outfit', display: 'inline-flex', alignItems: 'center', gap: '4px', whiteSpace: 'nowrap' }}>
                       <Calendar size={10} /> {c.timeline}
                     </span>
                   </div>
-                  <h3 style={{ fontSize: '2rem', fontFamily: 'Outfit', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>
+                  <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.2rem)', fontFamily: 'Outfit', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>
                     {c.resultTitle}
                   </h3>
-                  <p style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', fontWeight: 700, marginTop: '0.4rem', fontFamily: 'Outfit', letterSpacing: '0.5px' }}>
+                  <p style={{ color: 'var(--gold-primary)', fontSize: '0.85rem', fontWeight: 700, marginTop: '0.4rem', fontFamily: 'Outfit', letterSpacing: '0.5px' }}>
                     NICHE: {c.niche.toUpperCase()}
                   </p>
                 </div>
                 
                 {/* Dynamic Metric Display with Count-Ups */}
-                <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap', flex: '1 1 300px', width: '100%' }}>
                   {c.metrics.map((m, mIdx) => (
-                    <div key={mIdx} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem 1.6rem', textAlign: 'center', minWidth: '130px' }}>
-                      <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#fff', fontFamily: 'Outfit' }}>
+                    <div key={mIdx} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '12px', padding: '1rem 0.5rem', textAlign: 'center', flex: '1 1 90px', minWidth: '90px' }}>
+                      <div style={{ fontSize: 'clamp(1.4rem, 4vw, 1.8rem)', fontWeight: 900, color: '#fff', fontFamily: 'Outfit' }}>
                         <MetricCounter value={m.after} />
                       </div>
-                      <div style={{ fontSize: '0.68rem', color: '#666', fontWeight: 800, marginTop: '4px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{m.label}</div>
+                      <div style={{ fontSize: '0.62rem', color: '#666', fontWeight: 800, marginTop: '4px', letterSpacing: '0.5px', textTransform: 'uppercase', lineHeight: 1.2 }}>{m.label}</div>
                     </div>
                   ))}
                 </div>
@@ -299,12 +298,12 @@ const Results: React.FC = () => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
             {testimonials.map((t, tIdx) => (
               <motion.div
                 key={tIdx}
                 className="glass-panel"
-                style={{ padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', position: 'relative' }}
+                style={{ padding: 'clamp(1.5rem, 5vw, 3rem) clamp(1.2rem, 4vw, 2.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', position: 'relative' }}
                 whileHover={{ y: -6, borderColor: 'rgba(191,149,63,0.3)' }}
               >
                 <div style={{ position: 'absolute', top: '25px', right: '25px', opacity: 0.05, color: '#fff' }}>
@@ -359,7 +358,7 @@ const Results: React.FC = () => {
                 whileHover={{ y: -8, borderColor: 'rgba(191, 149, 63, 0.4)' }}
                 onClick={() => setSelectedProof(proof.src)}
               >
-                <div style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative', background: '#080808', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '360px', border: '1px solid rgba(255,255,255,0.03)' }}>
+                <div style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative', background: '#080808', display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'clamp(240px, 45vh, 360px)', border: '1px solid rgba(255,255,255,0.03)' }}>
                   <img 
                     src={proof.src} 
                     alt={proof.label} 

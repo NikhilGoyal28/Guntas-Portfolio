@@ -96,18 +96,14 @@ const Process: React.FC = () => {
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
-              className="glass-panel"
+              className="glass-panel process-grid"
               initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1 }}
               whileHover={{ borderColor: 'rgba(191,149,63,0.3)', y: -4 }}
               style={{
-                padding: '3rem',
-                display: 'grid',
-                gridTemplateColumns: '80px 1.5fr 1fr',
-                gap: '2rem',
-                alignItems: 'center',
+                padding: 'clamp(1.5rem, 5vw, 3rem)',
                 background: 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.005) 100%)',
                 zIndex: 1
               }}

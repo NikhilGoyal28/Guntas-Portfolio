@@ -146,7 +146,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Packages Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2.5rem', alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem', alignItems: 'stretch' }}>
           {packages.map((pkg, idx) => (
             <motion.div
               key={idx}
@@ -159,7 +159,7 @@ const Services: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '3.5rem 2.5rem',
+                padding: 'clamp(1.5rem, 5vw, 3.5rem) clamp(1.2rem, 4vw, 2.5rem)',
                 background: pkg.featured ? 'linear-gradient(180deg, rgba(191,149,63,0.03) 0%, rgba(255,255,255,0.005) 100%)' : 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)',
                 border: pkg.featured ? '1px solid rgba(191,149,63,0.3)' : '1px solid rgba(255,255,255,0.08)',
                 height: '100%',
@@ -268,8 +268,8 @@ const Services: React.FC = () => {
         </div>
 
         {/* Comparison Board */}
-        <div className="glass-panel" style={{ padding: '0', overflowX: 'auto', borderRadius: '16px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '700px' }}>
+        <div className="glass-panel" style={{ padding: '0', borderRadius: '16px' }}>
+          <table className="responsive-table">
             <thead>
               <tr style={{ background: 'rgba(255,255,255,0.015)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <th style={{ padding: '2rem', fontFamily: 'Outfit', fontSize: '1rem', fontWeight: 800, color: '#fff' }}>SYSTEM STRATEGY</th>
@@ -280,9 +280,9 @@ const Services: React.FC = () => {
             <tbody>
               {comparisons.map((row, idx) => (
                 <tr key={idx} style={{ borderBottom: idx === comparisons.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.04)', transition: 'background 0.3s ease' }} className="table-row-hover">
-                  <td style={{ padding: '2rem', fontFamily: 'Outfit', fontWeight: 700, color: '#fff', fontSize: '1.05rem' }}>{row.metric}</td>
-                  <td style={{ padding: '2rem', color: '#666', fontSize: '0.92rem', lineHeight: 1.5, fontFamily: 'Inter' }}>{row.others}</td>
-                  <td style={{ padding: '2rem', color: '#ccc', fontSize: '0.92rem', lineHeight: 1.5, fontFamily: 'Inter', fontWeight: 500 }}>
+                  <td data-label="System Strategy" style={{ padding: '2rem', fontFamily: 'Outfit', fontWeight: 700, color: '#fff', fontSize: '1.05rem' }}>{row.metric}</td>
+                  <td data-label="What Other Managers Do" style={{ padding: '2rem', color: '#666', fontSize: '0.92rem', lineHeight: 1.5, fontFamily: 'Inter' }}>{row.others}</td>
+                  <td data-label="What We Do" style={{ padding: '2rem', color: '#ccc', fontSize: '0.92rem', lineHeight: 1.5, fontFamily: 'Inter', fontWeight: 500 }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                       <Check size={14} style={{ color: 'var(--gold-primary)', marginTop: '3px', flexShrink: 0 }} />
                       <span>{row.guntas}</span>

@@ -16,8 +16,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none !important;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 
 body {
   font-family: 'Inter', sans-serif;
@@ -161,8 +167,8 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
   z-index: 9999;
   opacity: 0.04;
@@ -350,5 +356,121 @@ section {
   .btn-row > * {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Custom Responsive Additions */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  .glass-panel {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .process-grid {
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+  }
+  .process-grid > div:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .process-grid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-grid > div:last-child {
+    grid-column: span 1;
+    width: 100%;
+  }
+}
+
+/* Prevent horizontal overflow on root elements */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Responsive Table Styling */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .responsive-table {
+    min-width: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  .responsive-table thead {
+    display: none !important;
+  }
+  .responsive-table tbody,
+  .responsive-table tr,
+  .responsive-table td {
+    display: block !important;
+    width: 100% !important;
+  }
+  .responsive-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 1.5rem !important;
+  }
+  .responsive-table td {
+    padding: 0.8rem 0 !important;
+    border: none !important;
+    color: #ccc !important;
+  }
+  .responsive-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .featured-badge {
+    position: static !important;
+    display: inline-flex !important;
+    margin-bottom: 1.5rem !important;
+    width: fit-content !important;
+    top: auto !important;
+    right: auto !important;
   }
 }
