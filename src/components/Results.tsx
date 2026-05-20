@@ -57,11 +57,11 @@ const MetricCounter: React.FC<{ value: string }> = ({ value }) => {
     const updateCount = (currentTime: number) => {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
-      
+
       // Easing function: easeOutQuad
       const easedProgress = progress * (2 - progress);
       const currentCount = Math.floor(easedProgress * target);
-      
+
       setCount(currentCount);
 
       if (progress < 1) {
@@ -184,15 +184,15 @@ const Results: React.FC = () => {
   ];
 
   const proofs: ProofImage[] = [
-    { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.49.jpeg", label: "Instagram Analytics Spikes" },
-    { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.50.jpeg", label: "Viral Trend Insights" },
-    { src: "/data/Achievements/WhatsApp Image 2026-05-11 at 11.20.50 (1).jpeg", label: "Client Validation Message" }
+    { src: "/data/Achievements/img-1.jpeg", label: "Instagram Analytics Spikes" },
+    { src: "/data/Achievements/img-2.jpeg", label: "Viral Trend Insights" },
+    { src: "/data/Achievements/img-3.jpeg", label: "Client Validation Message" }
   ];
 
   return (
     <section id="results" ref={ref} style={{ background: 'radial-gradient(100% 50% at 50% 50%, rgba(255,255,255,0.005) 0%, rgba(0,0,0,0) 100%)' }}>
       <div className="container">
-        
+
         {/* Title */}
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <span style={{ color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', fontWeight: 700 }}>PROVEN ROI & SOCIAL PROOF</span>
@@ -216,7 +216,7 @@ const Results: React.FC = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               style={{ padding: 'clamp(1.5rem, 5vw, 3.5rem)', display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 4vw, 3rem)' }}
             >
-              
+
               {/* Top Header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
                 <div style={{ flex: '1 1 300px', minWidth: 0 }}>
@@ -233,7 +233,7 @@ const Results: React.FC = () => {
                     NICHE: {c.niche.toUpperCase()}
                   </p>
                 </div>
-                
+
                 {/* Dynamic Metric Display with Count-Ups */}
                 <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap', flex: '1 1 300px', width: '100%' }}>
                   {c.metrics.map((m, mIdx) => (
@@ -359,10 +359,10 @@ const Results: React.FC = () => {
                 onClick={() => setSelectedProof(proof.src)}
               >
                 <div style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative', background: '#080808', display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'clamp(240px, 45vh, 360px)', border: '1px solid rgba(255,255,255,0.03)' }}>
-                  <img 
-                    src={proof.src} 
-                    alt={proof.label} 
-                    style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }} 
+                  <img
+                    src={proof.src}
+                    alt={proof.label}
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
                   />
                   <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)', opacity: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'opacity 0.3s ease' }} className="proof-hover">
                     <Maximize2 size={24} style={{ color: '#fff' }} />
@@ -435,10 +435,10 @@ const Results: React.FC = () => {
                 style={{ position: 'relative', maxWidth: '90%', maxHeight: '90%', zIndex: 999999999 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <img 
-                  src={selectedProof} 
-                  alt="Expanded Proof" 
-                  style={{ width: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 50px 100px rgba(0,0,0,0.9)' }} 
+                <img
+                  src={selectedProof}
+                  alt="Expanded Proof"
+                  style={{ width: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 50px 100px rgba(0,0,0,0.9)' }}
                 />
               </motion.div>
             </motion.div>

@@ -215,6 +215,7 @@ section {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -284,14 +285,17 @@ section {
   .masonry-grid {
     column-count: 2;
   }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
   }
+
   .hero-grid .btn-row {
     justify-content: center;
   }
+
   .hero-grid p {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -302,44 +306,44 @@ section {
   .masonry-grid {
     column-count: 1;
   }
-  
+
   .transformation-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .before-after-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
-  .before-after-grid > div {
+
+  .before-after-grid>div {
     border-right: none !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-right: 0 !important;
     padding-left: 0 !important;
     padding-bottom: 1.5rem;
   }
-  
-  .before-after-grid > div:last-child {
+
+  .before-after-grid>div:last-child {
     border-bottom: none;
     padding-bottom: 0;
     padding-left: 0 !important;
   }
-  
+
   .expertise-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   section {
     padding: 5rem 0;
   }
-  
+
   h1 {
     font-size: 3.2rem !important;
   }
-  
+
   h2 {
     font-size: 2.8rem !important;
   }
@@ -349,11 +353,13 @@ section {
   .expertise-grid {
     grid-template-columns: 1fr;
   }
+
   .btn-row {
     flex-direction: column;
     width: 100%;
   }
-  .btn-row > * {
+
+  .btn-row>* {
     width: 100%;
     justify-content: center;
   }
@@ -364,6 +370,7 @@ section {
   .hide-mobile {
     display: none !important;
   }
+
   .glass-panel {
     padding: 1.5rem !important;
   }
@@ -387,7 +394,8 @@ section {
     grid-template-columns: 80px 1fr;
     gap: 2rem;
   }
-  .process-grid > div:last-child {
+
+  .process-grid>div:last-child {
     grid-column: span 2;
   }
 }
@@ -398,21 +406,27 @@ section {
     gap: 1.5rem;
     text-align: center;
   }
-  .process-grid > div {
+
+  .process-grid>div {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .process-grid > div:last-child {
+
+  .process-grid>div:last-child {
     grid-column: span 1;
     width: 100%;
   }
 }
 
 /* Prevent horizontal overflow on root elements */
-html, body {
+html {
   max-width: 100%;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .app-container {
@@ -421,7 +435,25 @@ html, body {
   overflow-x: hidden !important;
 }
 
-/* Responsive Table Styling */
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+
 .responsive-table {
   width: 100%;
   border-collapse: collapse;
@@ -435,24 +467,29 @@ html, body {
     display: block !important;
     width: 100% !important;
   }
+
   .responsive-table thead {
     display: none !important;
   }
+
   .responsive-table tbody,
   .responsive-table tr,
   .responsive-table td {
     display: block !important;
     width: 100% !important;
   }
+
   .responsive-table tr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     padding: 1.5rem !important;
   }
+
   .responsive-table td {
     padding: 0.8rem 0 !important;
     border: none !important;
     color: #ccc !important;
   }
+
   .responsive-table td::before {
     content: attr(data-label);
     display: block;
@@ -464,7 +501,7 @@ html, body {
     letter-spacing: 1px;
     margin-bottom: 0.4rem;
   }
-  
+
   .featured-badge {
     position: static !important;
     display: inline-flex !important;
@@ -473,4 +510,17 @@ html, body {
     top: auto !important;
     right: auto !important;
   }
+}
+
+/* Hide scrollbar on body and all other elements, but preserve the default browser scrollbar on html */
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar,
+.app-container::-webkit-scrollbar {
+  display: none !important;
+}
+body,
+#root,
+.app-container {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
