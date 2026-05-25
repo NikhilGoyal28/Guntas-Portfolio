@@ -19,9 +19,9 @@ const ProjectsGallery: React.FC = () => {
   const [selectedProj, setSelectedProj] = useState<Project | null>(null);
 
   const projects: Project[] = [
-    { 
-      type: 'video', 
-      src: '/data/Projects/WhatsApp Video 2026-05-17 at 21.52.50.mp4', 
+    {
+      type: 'video',
+      src: '/data/Projects/video-1.mp4',
       label: 'High-Retention Video Hooks',
       hook: 'The Negative Frame hook used to filter high-intent prospects.',
       views: '1.4M+',
@@ -29,9 +29,9 @@ const ProjectsGallery: React.FC = () => {
       shares: '34K',
       strategy: 'Visual contrast and rapid 3-second scene splicing to reset the attention span.'
     },
-    { 
-      type: 'image', 
-      src: '/data/Projects/WhatsApp Image 2026-05-17 at 21.18.10.jpeg', 
+    {
+      type: 'image',
+      src: '/data/Projects/img-1.jpeg',
       label: 'Premium Brand Aesthetics',
       hook: 'Luxury minimal styling with gold gradient ambient lighting.',
       views: '950K+',
@@ -39,9 +39,9 @@ const ProjectsGallery: React.FC = () => {
       shares: '12K',
       strategy: 'Clean editorial grid typography mapping to high-ticket buyer psychographics.'
     },
-    { 
-      type: 'video', 
-      src: '/data/Projects/WhatsApp Video 2026-05-17 at 21.52.52.mp4', 
+    {
+      type: 'video',
+      src: '/data/Projects/video-2.mp4',
       label: 'Visual Pacing Strategy',
       hook: 'Sound design pacing aligned to dynamic graphic micro-reveals.',
       views: '2.1M+',
@@ -49,9 +49,9 @@ const ProjectsGallery: React.FC = () => {
       shares: '85K',
       strategy: 'Auditory and visual pacing sync, ensuring less than 0.8s of static screen time.'
     },
-    { 
-      type: 'image', 
-      src: '/data/Projects/WhatsApp Image 2026-05-17 at 21.58.02.jpeg', 
+    {
+      type: 'image',
+      src: '/data/Projects/img-2.jpeg',
       label: 'Carousel Design Framework',
       hook: 'AIDA formula carousel pacing that forces the user to swipe.',
       views: '620K+',
@@ -59,9 +59,9 @@ const ProjectsGallery: React.FC = () => {
       shares: '18K',
       strategy: 'High-contrast graphic templates designed to optimize platform swipe-through-rate.'
     },
-    { 
-      type: 'image', 
-      src: '/data/Projects/WhatsApp Image 2026-05-17 at 21.18.11.jpeg', 
+    {
+      type: 'image',
+      src: '/data/Projects/img-3.jpeg',
       label: 'Luxury Brand Consulting',
       hook: 'Minimal typographic styling designed for prestige brands.',
       views: '800K+',
@@ -69,9 +69,9 @@ const ProjectsGallery: React.FC = () => {
       shares: '9K',
       strategy: 'Eliminating standard template noise to project unmatched high-ticket authority.'
     },
-    { 
-      type: 'video', 
-      src: '/data/Projects/WhatsApp Video 2026-05-17 at 21.52.52 (1).mp4', 
+    {
+      type: 'video',
+      src: '/data/Projects/video-3.mp4',
       label: 'Engagement Amplification',
       hook: 'Auditory patterns and loop logic to trigger multiple watch-throughs.',
       views: '3.4M+',
@@ -84,7 +84,7 @@ const ProjectsGallery: React.FC = () => {
   return (
     <section id="projects" className="reveal" style={{ position: 'relative', overflow: 'hidden' }}>
       <div className="container">
-        
+
         {/* Title Block */}
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <span style={{ color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', fontWeight: 700 }}>PREMIUM WORK GALLERY</span>
@@ -99,44 +99,44 @@ const ProjectsGallery: React.FC = () => {
         {/* Masonry Layout */}
         <div className="masonry-grid">
           {projects.map((proj, idx) => (
-            <motion.div 
-              key={idx} 
-              className="masonry-item glass-panel" 
+            <motion.div
+              key={idx}
+              className="masonry-item glass-panel"
               style={{ padding: '0.6rem', cursor: 'pointer', overflow: 'hidden' }}
               whileHover={{ y: -8, borderColor: 'rgba(191, 149, 63, 0.4)' }}
               onClick={() => setSelectedProj(proj)}
             >
               <div style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
                 {proj.type === 'video' ? (
-                  <video 
-                    src={proj.src} 
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
+                  <video
+                    src={proj.src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 ) : (
-                  <img 
-                    src={proj.src} 
-                    alt={proj.label} 
+                  <img
+                    src={proj.src}
+                    alt={proj.label}
                     style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 )}
-                
+
                 {/* Desktop Hover Overlay: showing title, strategy, and views achieved on hover */}
-                <div style={{ 
-                  position: 'absolute', 
-                  inset: 0, 
-                  background: 'linear-gradient(to top, rgba(3,3,3,0.95) 0%, rgba(3,3,3,0.4) 60%, rgba(3,3,3,0.15) 100%)', 
-                  opacity: 0, 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  justifyContent: 'flex-end', 
-                  padding: '2rem', 
-                  transition: 'opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1)' 
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(to top, rgba(3,3,3,0.95) 0%, rgba(3,3,3,0.4) 60%, rgba(3,3,3,0.15) 100%)',
+                  opacity: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
+                  padding: '2rem',
+                  transition: 'opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1)'
                 }} className="overlay-hover">
-                  
+
                   <div style={{ transform: 'translateY(15px)', transition: 'transform 0.35s cubic-bezier(0.25, 1, 0.5, 1)' }} className="overlay-content-slide">
                     <span style={{ color: 'var(--gold-primary)', fontWeight: 800, fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
                       {proj.views} VIEWS ✦ {proj.retention} RETENTION
@@ -178,7 +178,7 @@ const ProjectsGallery: React.FC = () => {
       {/* Strategy Inspection Lightbox Modal rendered inside React Portal for peak z-index isolation */}
       {typeof document !== 'undefined' && selectedProj && createPortal(
         <AnimatePresence>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -186,8 +186,8 @@ const ProjectsGallery: React.FC = () => {
             style={{
               position: 'fixed',
               inset: 0,
-              zIndex: 999999999, 
-              background: 'rgba(3, 3, 3, 0.98)', 
+              zIndex: 999999999,
+              background: 'rgba(3, 3, 3, 0.98)',
               backdropFilter: 'blur(25px)',
               display: 'flex',
               justifyContent: 'center',
@@ -196,7 +196,7 @@ const ProjectsGallery: React.FC = () => {
             }}
           >
             {/*circular Close Button */}
-            <button 
+            <button
               onClick={() => setSelectedProj(null)}
               className="modal-close-btn"
               style={{
@@ -223,7 +223,7 @@ const ProjectsGallery: React.FC = () => {
               <X size={20} />
             </button>
 
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.92, y: 30 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.92, y: 30 }}
@@ -248,32 +248,32 @@ const ProjectsGallery: React.FC = () => {
               {/* Left Side: Creative Asset Preview */}
               <div style={{ background: '#000', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 'clamp(0.6rem, 2vw, 1.5rem)', position: 'relative', overflow: 'hidden' }}>
                 {selectedProj.type === 'video' ? (
-                  <video 
-                    src={selectedProj.src} 
-                    controls 
-                    autoPlay 
-                    loop 
-                    playsInline 
+                  <video
+                    src={selectedProj.src}
+                    controls
+                    autoPlay
+                    loop
+                    playsInline
                     style={{ width: '100%', maxHeight: '600px', borderRadius: '12px', display: 'block', objectFit: 'contain' }}
                   />
                 ) : (
-                  <img 
-                    src={selectedProj.src} 
-                    alt={selectedProj.label} 
+                  <img
+                    src={selectedProj.src}
+                    alt={selectedProj.label}
                     style={{ width: '100%', maxHeight: '600px', objectFit: 'contain', borderRadius: '12px', display: 'block' }}
                   />
                 )}
               </div>
 
               {/* Right Side: Strategy Breakdown Panel */}
-              <div 
+              <div
                 className="modal-strategy-panel"
-                style={{ 
-                  padding: 'clamp(1.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem)', 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  justifyContent: 'space-between', 
-                  overflowY: 'auto' 
+                style={{
+                  padding: 'clamp(1.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  overflowY: 'auto'
                 }}
               >
                 <div>
@@ -323,9 +323,9 @@ const ProjectsGallery: React.FC = () => {
                   </div>
 
                   {/* Connect Call To Action */}
-                  <MagneticButton 
-                    href="#contact" 
-                    className="btn-primary" 
+                  <MagneticButton
+                    href="#contact"
+                    className="btn-primary"
                     style={{ width: '100%', justifyContent: 'center' }}
                     onClick={() => setSelectedProj(null)}
                   >

@@ -24,7 +24,7 @@ const TiltCard: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const yPct = mouseY / height - 0.5;
     x.set(xPct);
     y.set(yPct);
-    
+
     // Set CSS variable for glow effect
     ref.current.style.setProperty('--mouse-x', `${mouseX}px`);
     ref.current.style.setProperty('--mouse-y', `${mouseY}px`);
@@ -60,15 +60,15 @@ const Stats: React.FC = () => {
     },
     {
       icon: <Eye size={32} className="text-gold" />,
-      value: "20K+",
+      value: "25K+",
       label: "Views Per Post",
-      context: "Via Trend Optimization"
+      context: "Product Campaigning Performance"
     },
     {
       icon: <Users size={32} className="text-gold" />,
       value: "20%",
       label: "Follower Growth",
-      context: "Money Matters"
+      context: "Organic Audience Scaling"
     },
     {
       icon: <Activity size={32} className="text-gold" />,
@@ -90,9 +90,9 @@ const Stats: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '2rem',
           perspective: '1000px'
         }}>

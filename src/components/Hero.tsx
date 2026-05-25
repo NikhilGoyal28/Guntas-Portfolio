@@ -24,19 +24,19 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
             className="hero-badge"
-            style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '10px', 
-              padding: '0.6rem 1.4rem', 
-              border: '1px solid rgba(191, 149, 63, 0.3)', 
-              background: 'rgba(191, 149, 63, 0.04)', 
-              borderRadius: '50px', 
-              color: '#fff', 
-              fontWeight: 700, 
-              letterSpacing: '1.5px', 
-              marginBottom: '2rem', 
-              textTransform: 'uppercase', 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              padding: '0.6rem 1.4rem',
+              border: '1px solid rgba(191, 149, 63, 0.3)',
+              background: 'rgba(191, 149, 63, 0.04)',
+              borderRadius: '50px',
+              color: '#fff',
+              fontWeight: 700,
+              letterSpacing: '1.5px',
+              marginBottom: '2rem',
+              textTransform: 'uppercase',
               fontSize: 'clamp(0.68rem, 2vw, 0.78rem)',
               fontFamily: 'Outfit',
               boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.05)'
@@ -63,13 +63,13 @@ const Hero: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <TrendingUp size={16} style={{ color: 'var(--gold-primary)' }} />
               <span style={{ fontSize: '0.9rem', color: '#888', fontWeight: 600, fontFamily: 'Outfit' }}>
-                Average Reach Growth: <strong style={{ color: '#fff' }}>+73%</strong>
+                Average Reach Growth: <strong style={{ color: '#fff' }}>+137%</strong>
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Award size={16} style={{ color: 'var(--gold-primary)' }} />
               <span style={{ fontSize: '0.9rem', color: '#888', fontWeight: 600, fontFamily: 'Outfit' }}>
-                Engagement Surge: <strong style={{ color: '#fff' }}>+50%</strong>
+                Engagement Surge: <strong style={{ color: '#fff' }}>+84%</strong>
               </span>
             </div>
           </div>

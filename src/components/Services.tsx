@@ -23,7 +23,7 @@ const Services: React.FC = () => {
     {
       name: "Content Strategy Audit",
       tagline: "See exactly why your content isn't converting and how to fix it.",
-      price: "$2,000",
+      price: "$700 - $900",
       timeline: "2 Weeks",
       forWhom: "Brands/Founders with existing content but low conversion or flatlining view numbers.",
       outcome: "A customized playbook outlining your psychology-driven growth map that you or your team can deploy immediately.",
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
     {
       name: "Monthly Content Retainer",
       tagline: "The complete, hands-off content growth system engineered for brand scale.",
-      price: "$3,500 - $7,500/mo",
+      price: "$2,500/month - $4,000/month",
       timeline: "Ongoing (3-Month Min)",
       forWhom: "Prestige brands, founders, and creators seeking elite positioning and inbound trust without the time investment.",
       outcome: "Hands-off high-retention post streams (averaging 15K-20K views) engineered directly to drive client conversions.",
@@ -56,7 +56,7 @@ const Services: React.FC = () => {
     {
       name: "Campaign Strategy & Launch",
       tagline: "Outsource launch anxieties. Build predictable hype that drives conversions.",
-      price: "$5,000 - $15,000",
+      price: "$1,500 - $3,500",
       timeline: "4 - 8 Weeks",
       forWhom: "Brands launching new products, workshops, services, or executing global rebrands.",
       outcome: "A high-visibility campaign launch structure built to capture maximum reach (+73% typical spikes).",
@@ -96,10 +96,10 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" ref={ref} style={{ background: 'radial-gradient(100% 50% at 50% 50%, rgba(212,175,55,0.015) 0%, rgba(0,0,0,0) 100%)', display: 'flex', flexDirection: 'column', gap: '8rem' }}>
-      
+
       {/* 1. Services & Packages Section */}
       <div className="container">
-        
+
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span style={{ color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', fontWeight: 700 }}>HOW WE COLLABORATE</span>
@@ -113,7 +113,7 @@ const Services: React.FC = () => {
           {/* Pricing Toggle Button */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', background: 'rgba(255,255,255,0.02)', padding: '0.5rem 1.5rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.05)' }}>
             <span style={{ color: !showPricing ? '#fff' : '#666', fontSize: '0.9rem', fontWeight: 700, fontFamily: 'Outfit' }}>Hide Investment Tiers</span>
-            <button 
+            <button
               onClick={() => setShowPricing(!showPricing)}
               style={{
                 width: '50px',
@@ -129,15 +129,15 @@ const Services: React.FC = () => {
                 transition: 'background 0.3s ease'
               }}
             >
-              <motion.div 
-                layout 
-                style={{ 
-                  width: '20px', 
-                  height: '20px', 
-                  borderRadius: '50%', 
+              <motion.div
+                layout
+                style={{
+                  width: '20px',
+                  height: '20px',
+                  borderRadius: '50%',
                   background: '#000',
                   x: showPricing ? 24 : 0
-                }} 
+                }}
                 transition={{ type: 'spring', stiffness: 500, damping: 30 }}
               />
             </button>
@@ -168,18 +168,18 @@ const Services: React.FC = () => {
             >
               {/* Featured Badge */}
               {pkg.featured && (
-                <div style={{ 
-                  position: 'absolute', 
-                  top: '25px', 
-                  right: '25px', 
-                  background: 'linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%)', 
-                  color: '#000', 
-                  fontSize: '0.75rem', 
-                  fontWeight: 900, 
-                  fontFamily: 'Outfit', 
-                  padding: '0.4rem 1rem', 
-                  borderRadius: '50px', 
-                  textTransform: 'uppercase', 
+                <div style={{
+                  position: 'absolute',
+                  top: '25px',
+                  right: '25px',
+                  background: 'linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%)',
+                  color: '#000',
+                  fontSize: '0.75rem',
+                  fontWeight: 900,
+                  fontFamily: 'Outfit',
+                  padding: '0.4rem 1rem',
+                  borderRadius: '50px',
+                  textTransform: 'uppercase',
                   letterSpacing: '1px',
                   display: 'flex',
                   alignItems: 'center',
@@ -238,8 +238,8 @@ const Services: React.FC = () => {
 
               {/* Action Button inside card */}
               <div style={{ marginTop: '3.5rem' }}>
-                <MagneticButton 
-                  href="#contact" 
+                <MagneticButton
+                  href="#contact"
                   className={pkg.featured ? "btn-primary" : "btn-outline"}
                   style={{ width: '100%', justifyContent: 'center' }}
                 >
@@ -255,7 +255,7 @@ const Services: React.FC = () => {
 
       {/* 2. Brand Differentiation Table: Why Guntas Converts Better */}
       <div className="container" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '6rem' }}>
-        
+
         {/* Sub Header */}
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <span style={{ color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.8rem', fontWeight: 800 }}>COMPETITIVE SUPERIORITY</span>
