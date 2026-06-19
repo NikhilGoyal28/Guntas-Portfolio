@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             }}
           >
             <Sparkles size={14} style={{ color: 'var(--gold-primary)' }} />
-            <span>HubSpot Certified ✦ 73% avg organic reach growth</span>
+            <span>HubSpot Certified ✦ 137% avg organic reach growth</span>
           </motion.div>
 
           {/* Primary Punchy Copy */}
